@@ -42,7 +42,7 @@ class EventSubscriber
 
         $blueprint_content['sections']['fast_seo'] = [
             'display' => __('statamic-fast-seo::cp.tab_name'),
-            'fields' => collect(Settings::entryBlueprint()->contents()['sections']['main']['fields'])->toArray()
+            'fields' => collect(Settings::entryBlueprint()->contents()['tabs']['main']['sections'][0]['fields'])->toArray()
         ];
 
         $blueprint->setContents($blueprint_content);
